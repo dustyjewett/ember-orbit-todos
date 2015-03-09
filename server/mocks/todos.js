@@ -6,7 +6,7 @@ module.exports = function(app) {
     res.send({
       'todos': [{
         id:1,
-
+        title:'Add to Orbit.JS Documentation',
         createdAt:new Date(2015, 1, 1),
         updatedAt:new Date(2015, 1, 2),
         dueDate:new Date(2016, 5, 5)
