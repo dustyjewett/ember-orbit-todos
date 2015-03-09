@@ -5,7 +5,7 @@ import LocalStorageSource from 'orbit-common/local-storage-source';
 import JsonApiSource from 'orbit-common/jsonapi-source';
 
 Orbit.ajax = Ember.$.ajax;
-debugger;
+
 var get = Ember.get,
     set = Ember.set;
 
