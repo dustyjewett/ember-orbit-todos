@@ -2,7 +2,14 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  minifyCSS: {
+    enabled: false
+  },
+  minifyJS: {
+    enabled: false
+  }
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -28,6 +35,12 @@ app.import('bower_components/orbit.js/orbit-common.amd.js', {
 // Optional import of local storage source
 app.import('bower_components/orbit.js/orbit-common-local-storage.amd.js', {
   exports: {'orbit-common/local-storage-source': ['default']}
+});
+
+// Optional import of JSON API source and serializer
+app.import('bower_components/orbit.js/orbit-common-jsonapi.amd.js', {
+  exports: {'orbit-common/jsonapi-source': ['default'],
+    'orbit-common/jsonapi-serializer': ['default']}
 });
 
 // Required Ember-Orbit import
